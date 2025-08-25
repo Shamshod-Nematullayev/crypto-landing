@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default shriftni butun loyihaga qo‘llash */
+body {
+  @apply font-sans;
+}
