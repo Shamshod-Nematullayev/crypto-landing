@@ -1,8 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 /* Default shriftni butun loyihaga qo‘llash */
 body {
-  @apply font-sans;
+  font-family: "Montserrat", sans-serif;
+}
+
+@theme {
+  --color-primary: #9c27b0;
+  --color-primary-light: #e1bee7;
+  --color-primary-dark: #6a1b9a;
+
+  --color-secondary: #ffa000;
+  --color-secondary-light: #ffecb3;
+  --color-secondary-dark: #ff6f00;
+
+  --color-accent: #673ab7;
+  --color-accent-light: #d1c4e9;
+  --color-accent-dark: #4527a0;
+
+  --color-gray: #424242;
+  --color-gray-dark: #303030;
+
+  --color-success: #5dd662;
+  --color-error: #ff7272;
 }
