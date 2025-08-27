@@ -1,15 +1,12 @@
-import { useState } from "react";
-import "./App.css";
-import Item from "./components/MarketInfo/Item";
 import { MarketInfo } from "./components/MarketInfo";
 import Conteiner from "./components/Conteiner";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <div className="flex flex-col items-center">
-      <Conteiner>
-        <MarketInfo />
-      </Conteiner>
+      <MarketInfo />
+      <HeroSection />
     </div>
   );
 }

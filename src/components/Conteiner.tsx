@@ -1,3 +1,11 @@
-export default function Conteiner({ children }: { children: React.ReactNode }) {
-  return <div className="w-[1440px] mx-auto p-4">{children}</div>;
+export default function Conteiner({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`w-[1440px] mx-auto p-4 ${className}`}>{children}</div>
+  );
 }
