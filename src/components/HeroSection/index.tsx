@@ -29,7 +29,7 @@ function HeroSection() {
             </Typography>
           </p>
           <div className="flex gap-5">
-            <button className="px-6 py-2 bg-primary text-white font-semibold hover:bg-secondary transition duration-200 cursor-pointer rounded-md uppercase">
+            <button className="px-6 py-2 bg-primary text-white font-semibold hover:bg-secondary-dark transition duration-200 cursor-pointer rounded-md uppercase">
               Get Started
             </button>
             <button className="px-6 py-2 border-1 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition duration-200 cursor-pointer rounded-md uppercase">
