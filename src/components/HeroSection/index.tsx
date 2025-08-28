@@ -1,14 +1,13 @@
-import Header from "./Header";
+import Header from "../Header";
 import Mask from "../../assets/Mask.svg";
-import Banner1 from "../../assets/Banner1.png";
 import Conteiner from "../Conteiner";
-import Typography from "../Typography";
+import Slider from "./Slider";
 
 function HeroSection() {
-  console.log("Mask:", Mask);
   return (
     <Conteiner>
       <Header />
+      {/* Background */}
       <div
         className={`w-full min-h-full absolute top-0 left-0 z-[-99] bg-cover bg-no-repeat`}
       >
@@ -17,7 +16,9 @@ function HeroSection() {
           className={`w-full min-h-full absolute top-0 left-0 z-[-100]`}
         />
       </div>
-      <div className="flex items-center justify-between h-[400px] mt-10">
+
+      {/* Main Content + Slider */}
+      {/* <div className="flex items-center justify-between h-[400px] mt-10">
         <div className="w-[50%] h-[400px] flex flex-col justify-around">
           <Typography variant="h1">
             Digital currency leads at market in the right amount.
@@ -41,61 +42,10 @@ function HeroSection() {
           className="w-[50%] h-[400px] bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${Banner1})` }}
         ></div>
-      </div>
-      <div className="flex items-center justify-between mt-10">
-        <Tab
-          title="Business Solution?"
-          description="Interdum et malesuada ac antestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula suscipit orci. "
-          active
-        />
-        <Tab
-          title="Free project quote"
-          description="Interdum et malesuada ac antestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula suscipit orci. "
-        />
-        <Tab
-          title="Nulla lobortis nunc"
-          description="Interdum et malesuada ac antestibulum faucibus eget erat eget pretium. Donec commodo convallis ligula suscipit orci. "
-        />
-      </div>
+      </div> */}
+      <Slider />
     </Conteiner>
   );
 }
 
 export default HeroSection;
-
-function Tab({
-  title,
-  description,
-  active,
-}: {
-  title: string;
-  description: string;
-  active?: boolean;
-}) {
-  return (
-    <div className="flex items-center gap-5 h-20">
-      <div className="w-[2px] h-[80%] bg-gray-400"></div>
-
-      <div className="cursor-pointer">
-        <h2>
-          <Typography
-            variant="h2"
-            className={(active ? "text-secondary" : "") + " font-bold"}
-          >
-            {title}
-          </Typography>
-        </h2>
-        <p>
-          <Typography
-            variant="body1"
-            className={
-              (active ? "text-primary" : "") + " block truncate w-[400px]"
-            }
-          >
-            {description}
-          </Typography>
-        </p>
-      </div>
-    </div>
-  );
-}

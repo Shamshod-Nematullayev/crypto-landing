@@ -1,10 +1,17 @@
 import React from "react";
-import Logo from "../Logo";
-import Settings from "../../assets/settings.svg";
+import Logo from "./Logo";
+import Settings from "../assets/settings.svg";
 
-export default function Header() {
+export default function Header(
+  attributes: React.HTMLAttributes<HTMLDivElement>
+) {
   return (
-    <div className="flex justify-between items-center">
+    <div
+      {...attributes}
+      className={"flex justify-between items-center ".concat(
+        attributes.className || ""
+      )}
+    >
       <Logo />
       <Navbar />
       <ActionBar />
