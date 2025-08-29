@@ -2,20 +2,12 @@ import Header from "../Header";
 import Mask from "../../assets/Mask.svg";
 import Conteiner from "../Conteiner";
 import Slider from "./Slider";
+import HeroBackground from "./HeroBackground";
 
 function HeroSection() {
   return (
-    <Conteiner>
+    <Conteiner className="inset-0">
       <Header />
-      {/* Background */}
-      <div
-        className={`w-full min-h-full absolute top-0 left-0 z-[-99] bg-cover bg-no-repeat`}
-      >
-        <img
-          src={Mask}
-          className={`w-full min-h-full absolute top-0 left-0 z-[-100]`}
-        />
-      </div>
 
       {/* Main Content + Slider */}
       {/* <div className="flex items-center justify-between h-[400px] mt-10">

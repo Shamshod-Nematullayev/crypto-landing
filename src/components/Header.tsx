@@ -8,7 +8,7 @@ export default function Header(
   return (
     <div
       {...attributes}
-      className={"flex justify-between items-center ".concat(
+      className={"flex justify-between items-center dark:text-white ".concat(
         attributes.className || ""
       )}
     >

@@ -12,7 +12,7 @@ export default function Item({
   percent: number;
 }) {
   return (
-    <div className="flex gap-2 items-center justify-between h-[20px]">
+    <div className="flex gap-2 items-center justify-between h-[20px] font-semibold dark:text-white">
       <img src={imgUrl} alt="Bitcoin" className="w-[20px] h-[20px]" />
       <span>{name}</span>
       <span>$ {price.toFixed(3)}</span>

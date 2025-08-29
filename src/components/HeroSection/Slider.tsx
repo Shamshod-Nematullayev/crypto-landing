@@ -10,7 +10,7 @@ function Slider() {
   const { selectedIndex, onDotButtonClick } = useDotButton(emblaApi);
   return (
     <>
-      <div ref={emblaRef} className="overflow-hidden">
+      <div ref={emblaRef} className="overflow-hidden dark:text-white">
         <div className="flex">
           {/* Slide 1 */}
           <div className="flex flex-[0_0_100%] items-center justify-between h-[400px] mt-10">
@@ -92,7 +92,7 @@ function Slider() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-[80px]">
+      <div className="flex items-center justify-between mt-[80px] dark:text-white">
         <DotButton
           onClick={() => onDotButtonClick(0)}
           className="flex justify-center items-center"
@@ -148,7 +148,10 @@ function Tab({
           <h2>
             <Typography
               variant="h2"
-              className={(active ? "text-secondary" : "") + " font-bold"}
+              className={
+                (active ? "text-secondary dark:text-secondary-light" : "") +
+                " font-bold"
+              }
             >
               {title}
             </Typography>
@@ -157,7 +160,8 @@ function Tab({
             <Typography
               variant="body1"
               className={
-                (active ? "text-primary" : "") + " block truncate w-[400px]"
+                (active ? "text-primary text-primary-light" : "") +
+                " block truncate w-[400px]"
               }
             >
               {description}
