@@ -92,7 +92,7 @@ function Slider() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-[80px] dark:text-white">
+      <div className="flex items-center justify-between dark:text-white">
         <DotButton
           onClick={() => onDotButtonClick(0)}
           className="flex justify-center items-center"
@@ -142,7 +142,7 @@ function Tab({
 }) {
   return (
     <>
-      {!isFirst && <div className="w-[1px] h-[100px] bg-gray-300"></div>}
+      {!isFirst && <div className="w-[1px] h-[80px] bg-gray-300 mr-5"></div>}
       <div className="flex items-center gap-5 h-20 hover:bg-[#0000000d] hover:border-secondary border-1 border-transparent rounded-md transition duration-300 px-2 py-5">
         <div className="cursor-pointer">
           <h2>
