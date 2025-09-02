@@ -160,7 +160,7 @@ function Tab({
             <Typography
               variant="body1"
               className={
-                (active ? "text-primary text-primary-light" : "") +
+                (active ? "text-primary  dark:text-primary-light" : "") +
                 " block truncate w-[400px]"
               }
             >
