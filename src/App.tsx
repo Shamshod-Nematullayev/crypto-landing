@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import HeroBackground from "./components/HeroSection/HeroBackground";
 import AnimationHeader from "./components/AnimationHeader";
 import Hexagon from "./components/Hexagon";
+import ResultsSection from "./components/ResultsSection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           }}
         ></div>
         <HeroSection />
+        <ResultsSection />
         <Hexagon size={300} colors={["#FFA000", "#FFECB3"]} /> {/* Sariq */}
         <Hexagon size={300} colors={["#d1c4e9", "#825ec4"]} /> {/* Ziyohrang */}
         <Hexagon size={300} colors={["#e1bee7", "#b258c2"]} /> {/* Binafsha */}
