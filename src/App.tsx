@@ -22,9 +22,6 @@ function App() {
         ></div>
         <HeroSection />
         <ResultsSection />
-        <Hexagon size={300} colors={["#FFA000", "#FFECB3"]} /> {/* Sariq */}
-        <Hexagon size={300} colors={["#d1c4e9", "#825ec4"]} /> {/* Ziyohrang */}
-        <Hexagon size={300} colors={["#e1bee7", "#b258c2"]} /> {/* Binafsha */}
       </div>
     </div>
   );

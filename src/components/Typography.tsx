@@ -24,7 +24,11 @@ function Typography({
       classVariant = "text-[20px] font-normal";
       break;
   }
-  return <span className={`${classVariant} ${className}`}>{children}</span>;
+  return (
+    <span className={`${classVariant} `.concat(className || "")}>
+      {children}
+    </span>
+  );
 }
 
 export default Typography;
