@@ -3,7 +3,7 @@ export default function Conteiner({
   className,
   ref,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   ref?: React.Ref<HTMLDivElement>;
 }) {
