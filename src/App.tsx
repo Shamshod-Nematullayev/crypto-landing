@@ -15,19 +15,10 @@ function App() {
       <MarketInfo />
       <AnimationHeader />
       {/* Background */}
-      <div
-        className={`w-full min-h-[150%] absolute top-0 left-0 z-[-10] bg-cover bg-no-repeat dark:bg-gray-800 `}
-      >
-        <HeroBackground mode="light" />
-        <div
-          style={{
-            color: "white",
-          }}
-        ></div>
-        <HeroSection />
-        <ResultsSection />
-        <FeatureSection />
-      </div>
+      <HeroBackground mode="light" />
+      <HeroSection />
+      <ResultsSection />
+      <FeatureSection />
     </div>
   );
 }

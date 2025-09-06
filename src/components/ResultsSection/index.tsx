@@ -71,7 +71,7 @@ function ResultsSection() {
             </Typography>
           </p>
           <div className="relative" onClick={handleClickOpenVideoModal}>
-            <div className="flex items-center justify-center bg-[url(https://i.ytimg.com/an_webp/QPMkYyM2Gzg/mqdefault_6s.webp?du=3000&sqp=CIiJ68UG&rs=AOn4CLCxf0UQKahBKEdT09AiIqX5szZMsQ)] bg-cover bg-no-repeat h-[400px] w-[700px] brightness-50 rounded-2xl my-10 mx-5"></div>
+            <div className="flex items-center justify-center bg-[url(https://www.shutterstock.com/shutterstock/videos/1063861729/thumb/12.jpg?ip=x480)] bg-cover bg-no-repeat h-[400px] w-[700px] brightness-50 rounded-2xl my-10 mx-5" />
             <div
               className="flex items-center justify-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[100px] h-[100px] bg-white rounded-full cursor-pointer"
               onClick={handleClickOpenVideoModal}
