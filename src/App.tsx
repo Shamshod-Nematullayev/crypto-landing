@@ -2,10 +2,9 @@ import { MarketInfo } from "./components/MarketInfo";
 import HeroSection from "./components/HeroSection";
 import HeroBackground from "./components/HeroSection/HeroBackground";
 import AnimationHeader from "./components/AnimationHeader";
-import Hexagon from "./components/Hexagon";
 import ResultsSection from "./components/ResultsSection";
-import VideoModal from "./components/ResultsSection/VideoModal";
 import FeatureSection from "./components/FeatureSection";
+import BenefitSection from "./components/BenefitSection";
 
 function App() {
   const theme = localStorage.getItem("theme");
@@ -19,6 +18,7 @@ function App() {
       <HeroSection />
       <ResultsSection />
       <FeatureSection />
+      <BenefitSection />
     </div>
   );
 }

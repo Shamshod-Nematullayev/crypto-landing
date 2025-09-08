@@ -2,45 +2,49 @@ import Item from "./Item";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const data: { imgUrl: string; name: string; percent: number; price: number }[] =
-  [
-    {
-      imgUrl: "./src/assets/cryptoLogos/btc.png",
-      name: "BTC",
-      percent: 3,
-      price: 10.2,
-    },
-    {
-      imgUrl: "./src/assets/cryptoLogos/xrp.png",
-      name: "XRP",
-      percent: -3,
-      price: 0.003,
-    },
-    {
-      imgUrl: "./src/assets/cryptoLogos/nem.png",
-      name: "NEM",
-      percent: 3,
-      price: 10.2,
-    },
-    {
-      imgUrl: "./src/assets/cryptoLogos/iota.png",
-      name: "IOTA",
-      percent: -3,
-      price: 0.01,
-    },
-    {
-      imgUrl: "./src/assets/cryptoLogos/mnr.png",
-      name: "MNR",
-      percent: 3,
-      price: 10.2,
-    },
-    {
-      imgUrl: "./src/assets/cryptoLogos/byc.png",
-      name: "BYC",
-      percent: -3,
-      price: 0.003,
-    },
-  ]; //
+export const cryptoDemoData: {
+  imgUrl: string;
+  name: string;
+  percent: number;
+  price: number;
+}[] = [
+  {
+    imgUrl: "./src/assets/cryptoLogos/btc.png",
+    name: "BTC",
+    percent: 3,
+    price: 10.2,
+  },
+  {
+    imgUrl: "./src/assets/cryptoLogos/xrp.png",
+    name: "XRP",
+    percent: -3,
+    price: 0.003,
+  },
+  {
+    imgUrl: "./src/assets/cryptoLogos/nem.png",
+    name: "NEM",
+    percent: 3,
+    price: 10.2,
+  },
+  {
+    imgUrl: "./src/assets/cryptoLogos/iota.png",
+    name: "IOTA",
+    percent: -3,
+    price: 0.01,
+  },
+  {
+    imgUrl: "./src/assets/cryptoLogos/mnr.png",
+    name: "MNR",
+    percent: 3,
+    price: 10.2,
+  },
+  {
+    imgUrl: "./src/assets/cryptoLogos/byc.png",
+    name: "BYC",
+    percent: -3,
+    price: 0.003,
+  },
+]; //
 
 export function MarketInfo() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -55,7 +59,7 @@ export function MarketInfo() {
       <div className="overflow-hidden w-full h-[43px] " ref={emblaRef}>
         {/* Track */}
         <div className="flex items-center h-[43px]">
-          {data.map((item, i) => (
+          {cryptoDemoData.map((item, i) => (
             <div
               key={i}
               className="flex-[0_0_20%] flex items-center justify-center"

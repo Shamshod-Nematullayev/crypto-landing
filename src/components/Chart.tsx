@@ -1,61 +1,56 @@
-import { LineChart } from "lucide-react";
-import React from "react";
-import {
-  CartesianGrid,
-  Line,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Area, AreaChart, ResponsiveContainer, Tooltip } from "recharts";
 
-function Chart() {
-  const data = [
-    { name: "Jan", uv: 400 },
-    { name: "Feb", uv: 300 },
-    { name: "Mar", uv: 500 },
-    { name: "Apr", uv: 200 },
-    { name: "May", uv: 600 },
-  ];
-  return (
-    <div className="w-full h-72">
-      <ResponsiveContainer>
-        <LineChart data={data}>
-          {/* Gradient definitsiya */}
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#4f46e5" stopOpacity={1} />
-              <stop offset="100%" stopColor="#06b6d4" stopOpacity={1} />
-            </linearGradient>
-          </defs>
+interface Item {
+  name: string;
+  uv: number;
+}
 
-          {/* Gridni minimal qilamiz */}
-          <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
-
-          {/* O‘qlar */}
-          <XAxis dataKey="name" axisLine={false} tickLine={false} />
-          <YAxis axisLine={false} tickLine={false} />
-
-          {/* Hover qiymati */}
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "white",
-              border: "none",
-              borderRadius: "8px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-            }}
+function CustomTooltip({
+  active,
+  payload,
+  color,
+}: {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+  color: "green" | "red";
+}) {
+  if (active && payload && payload.length) {
+    console.log(arguments);
+    return (
+      <div className="bg-black text-white p-2 rounded-md shadow-md">
+        <p className="font-medium">{payload[0].payload.name}</p>
+        <div className="flex items-center">
+          <div
+            className={`inline-block w-4 h-4 border-1 border-${color}-400 mx-2 bg-${color}-100`}
           />
+          {payload[0].value}
+        </div>
+      </div>
+    );
+  }
+  return null;
+}
 
-          {/* Liniya */}
-          <Line
+function Chart({ data, color }: { data: Item[]; color: "green" | "red" }) {
+  return (
+    <div className="w-full h-full">
+      <ResponsiveContainer>
+        <AreaChart data={data}>
+          {/* Hover qiymati */}
+          <Tooltip content={<CustomTooltip color={"green"} />} />
+          <Area
             type="monotone"
             dataKey="uv"
-            stroke="url(#colorUv)" // Gradient ulanadi
-            strokeWidth={3}
-            dot={false} // belgilarni olib tashlaymiz
-            activeDot={{ r: 6, fill: "#4f46e5" }} // faqat hoverda chiqadi
+            stroke={color === "green" ? "#5dd662" : "#ff7272"}
+            fill={color === "green" ? "#5dd66280" : "#ff727280"}
+            dot={{
+              r: 3,
+              strokeWidth: 2,
+              stroke: color === "green" ? "#5dd662" : "#ff7272",
+            }}
           />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );
