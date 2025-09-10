@@ -1,8 +1,10 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { cryptoDemoData } from "../MarketInfo";
+import { motion } from "framer-motion";
 import {
   ChevronLeft,
   ChevronLeftIcon,
+  ChevronRightIcon,
   FlameIcon,
   MoveLeftIcon,
 } from "lucide-react";
@@ -16,7 +18,7 @@ function TopcoinsSlider() {
   });
   return (
     <div
-      className="overflow-hidden w-full h-[400px] relative border-1 flex items-center"
+      className="overflow-hidden w-full h-[400px] relative flex items-center"
       ref={emblaRef}
     >
       <div className="flex w-full gap-5">
@@ -30,10 +32,22 @@ function TopcoinsSlider() {
         ))}
       </div>
       <div className="w-full h-full absolute top-0 flex justify-between items-center">
-        <button className="bg-accent text-white text-[50px]">
+        <motion.button
+          className="bg-accent text-white text-[50px] rounded-r-2xl cursor-pointer px-2 py-1"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => emblaApi?.scrollPrev()}
+        >
           <ChevronLeftIcon size={50} />
-        </button>
-        <b>2</b>
+        </motion.button>
+        <motion.button
+          className="bg-accent text-white text-[50px] rounded-l-2xl cursor-pointer px-2 py-1"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => emblaApi?.scrollNext()}
+        >
+          <ChevronRightIcon size={50} />
+        </motion.button>
       </div>
     </div>
   );
@@ -48,7 +62,7 @@ function Card({
 }) {
   return (
     <div
-      className={"flex-[0_0_20%] flex flex-col items-center justify-center w-[360px] h-[300px] bg-white dark:bg-gray-500 hover:border-1 border-primary rounded-md shadow-lg hover:shadow-2xl transition duration-300 ".concat(
+      className={"flex-[0_0_25%] flex flex-col items-center justify-center w-[360px] h-[300px] bg-white dark:bg-gray-500 hover:border-1 border-primary rounded-md shadow-lg hover:shadow-2xl transition duration-300 ".concat(
         className
       )}
     >
